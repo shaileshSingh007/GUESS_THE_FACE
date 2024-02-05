@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/index.css">
+        <!-- <script src="cordova.js"></script> -->
+        <script src="js/index.js"></script>
+        <title>MemoryTester</title>
+    </head>
+    <body>
+        <!-- adding audio to html -->
+        <audio id="arrowsclick" controls> <source src="./sound/heroclick.wav" type="audio/mpeg"> </audio>
+        <audio id="wineachL" controls>    <source src="./sound/win.mp3" type="audio/mpeg">       </audio>
+        <audio id="gameoversound" controls> <source src="./sound/wrong-answer.mp3" type="audio/mpeg"> </audio>
+        <audio id="clicksound" controls> <source src="./sound/clicksound.mp3" type="audio/mpeg"> </audio>
+        <audio id="correctsound" controls> <source src="./sound/Correct-answer.mp3" type="audio/mpeg"> </audio>
+
+          <!--audio adding end  -->
+
+        
+     <div id="container">
+        <div class="app">
+             
+            <div id="App_name">GUESS<br>THE<br>FACE</div>
+            <div id="GTF_but">PLAY</div>
+            <div id="GTF_TimeScore">
+                  <div><i class="fa-solid fa-star"></i></div><div id="HighScore">0000</div>
+            </div>
+            <div id="GTF_quate">"It's 'Deja View' time! <br> Can you identify the face you've seen before?"</div>
+        </div>
+         
+         <!-- Guess the face Game -->
+         <div id="GTF_GB">
+                    <div id="GTF_lives"></div>
+                    <div id="GTF_progress"></div>
+                    <div id="GTF_Desc">
+                        In a sequence of human faces, player must quickly click the button when the same face appears again.<br><br>
+                        <b>Rules : </b><br>
+                        1. You have to click atleast 1 match before 60 seconds. <br>
+                        2. There will be atleast 3 matches in 60 seconds. <br>
+                        3. If failed to guess within 60 seconds, You loose 1 live. <br>
+                        4. You will have only three lives. <br>
+                        5. Your lives will increase by 1 for every right guess. <br>
+                        6. if same actors come again with different pose or style or angel , It will be counted different image. <br>
+                        7. Remember guess button will get disappear for next 3 seconds to prevent the cheating.
+                    </div>
+                    <div id="GTF_pics">
+                          
+                    </div>
+                    <div id="GTF_timer"></div>
+                    <div id="GTF_score"><div id="SCR_B"></div><div id="SCR_N">0000</div></div>
+                    <div id="GTF_play"></div>
+                    <div id="Game_back"></div>
+                    <div id="GTF_start"></div>
+                    
+         </div>
+         
+         <!-- ABout us or setting page -->
+         <div id="Set_SB"></div>
+         
+
+        <!-- Game Over -->
+         <div id="G_GameOver">
+             <div id="GO_name">GAME OVER</div>
+             <div id="GO_score">YOUR SCORE : 0000</div>
+             <div id="GO_back"></div>
+         </div>
+         
+         <!-- game winner by completing all the lavels -->
+         <div id="G_GameWin">
+            <div id="Win_name">YOU WON</div>
+            <div id="POM_tarif">When the game gets tough, <br> the tough get going. <br> and <br>You Proved it.</div>
+            <div id="F_score">000</div>
+            <div id="POM_back"><i class="fa fa-caret-left" aria-hidden="true"></i></div>
+         </div>
+
+        </div>    
+    </body>
+</html>
